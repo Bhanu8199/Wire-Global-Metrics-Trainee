@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAY 3 - Semantic Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      margin: 0;
+      padding: 10px;
+      color: #333;
+    }
+
+    header, footer {
+      text-align: center;
+      background: linear-gradient(to right, #3b53be, #1cc380);
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    ul, ol {
+      max-width: 600px;
+      margin: 10px auto 25px auto;
+      padding: 25px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    ul li, ol li {
+      margin: 8px 0;
+    }
+
+    .schedule {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      background: #ffffff;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+    }
+
+    th {
+      background: #0bb9d4;
+      color: rgb(255, 255, 255);
+    }
+
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    tr:hover {
+      background: #e0f7fa;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #444;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .submit-container {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    input[type="submit"] {
+      background: #26a8e0;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background: #e91831;
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>My Daily Routine</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="routine-heading">
+      <h2 id="routine-heading">Daily Activities</h2>
+      <p>Here is a simple daily routine:</p>
+      <ul>
+        <li>Sleeping</li>
+        <li>Eating</li>
+        <li>Listening to Music</li>
+        <li>Playing Cricket</li>
+        <li>Studying</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="goals-heading">
+      <h2 id="goals-heading">Future Goals</h2>
+      <ol>
+        <li>Become a Data Science Developer</li>
+        <li>Become a Software Developer</li>
+        <li>Become a Web Developer</li>
+        <li>Become a Machine Learning Developer</li>
+        <li>Become an AI Developer</li>
+      </ol>
+    </section>
+
+    <section class="schedule" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Weekly Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+            <th scope="col">Saturday</th>
+            <th scope="col">Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00 - 10:00</td>
+            <td>Workout</td>
+            <td>Study — Algorithms</td>
+            <td>Workout</td>
+            <td>Project work</td>
+            <td>Workout</td>
+            <td>Relax / Hobbies</td>
+            <td>Family time</td>
+          </tr>
+          <tr>
+            <td>10:30 - 12:30</td>
+            <td>Work / Coding</td>
+            <td>Work / Coding</td>
+            <td>Work / Meetings</td>
+            <td>Work / Coding</td>
+            <td>Work / Review</td>
+            <td>Personal learning</td>
+            <td>Plan week</td>
+          </tr>
+          <tr>
+            <td>13:30 - 15:00</td>
+            <td>Lunch & Break</td>
+            <td>Lunch & Break</td>
+            <td>Lunch & Break</td>
+            <td>Lunch & Break</td>
+            <td>Lunch & Break</td>
+            <td>Outing</td>
+            <td>Rest</td>
+          </tr>
+          <tr>
+            <td>16:00 - 18:00</td>
+            <td>Code review / Emails</td>
+            <td>Practice frontend</td>
+            <td>Pair programming</td>
+            <td>Study — System Design</td>
+            <td>Finish tasks</td>
+            <td>Shopping / Errands</td>
+            <td>Read / Learn</td>
+          </tr>
+          <tr>
+            <td>19:00 - 21:00</td>
+            <td>Dinner & Relax</td>
+            <td>Dinner & Relax</td>
+            <td>Side project</td>
+            <td>Dinner & Relax</td>
+            <td>Movie / Games</td>
+            <td>Family time</td>
+            <td>Prepare for Monday</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <br>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="username" aria-required="true">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="useremail" aria-required="true">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="usermessage"></textarea>
+
+        <div class="submit-container">
+          <input type="submit" value="Submit" role="button">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2024 BHANU VARDHAN MEDAPALLI. All rights reserved.</p>
+  </footer>
+</body>
+</html>
