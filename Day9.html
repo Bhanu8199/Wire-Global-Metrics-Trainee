@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page - Positioning</title>
+</head>
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fixed Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* Add top margin so content is not hidden behind navbar */
+body {
+  margin-top: 70px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+/* Sections */
+section {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Relative Example */
+.relative {
+  position: relative;
+  top: 10px;  /* moved slightly */
+  left: 20px;
+}
+
+/* Feature Boxes */
+.feature-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  background: #e6f7ff;
+  border-radius: 6px;
+}
+
+/* Absolute Button */
+.buy-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #ff5733;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.buy-btn:hover {
+  background: #e64a19;
+}
+</style>
+<body>
+
+  <!-- Fixed Navbar -->
+  <header class="navbar">
+    <h1>SmartWatch Pro</h1>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+    </nav>
+  </header>
+
+  <!-- Product Overview -->
+  <section id="overview" class="overview relative">
+    <h2>Product Overview</h2>
+    <p>A stylish smartwatch designed for modern life.</p>
+    <img src="https://img.global.news.samsung.com/in/wp-content/uploads/2020/07/top.jpg" alt="SmartWatch">
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="feature-box">Long Battery Life</div>
+    <div class="feature-box">Health Monitoring</div>
+    <div class="feature-box">Smart Notifications</div>
+    
+    <!-- Absolute Button -->
+    <button class="buy-btn">Buy Now</button>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <h2>Customer Testimonials</h2>
+    <p>“This smartwatch is amazing!” – Alex</p>
+    <p>“Great value for money!” – Priya</p>
+  </section>
+</body>
+</html>

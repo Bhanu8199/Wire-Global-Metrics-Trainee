@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartWatch Pro - Landing Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  /* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* Product Section */
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 10%;
+  background-color: #ffffff;
+}
+
+.product-text {
+  max-width: 500px;
+}
+
+.product-text h2 {
+  font-size: 2rem;
+  color: #1e3c72;
+  margin-bottom: 15px;
+}
+
+.product-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.cta-btn {
+  background: #1e3c72;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #2a5298;
+}
+
+/* Product Image */
+.product-image img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-image img {
+    margin-top: 20px;
+    width: 80%;
+  }
+}
+</style>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>SmartWatch Pro</h1>
+    <p>The Future on Your Wrist</p>
+  </header>
+
+  <!-- Description Section -->
+  <section class="product">
+    <div class="product-text">
+      <h2>Stay Connected, Stay Fit</h2>
+      <p>
+        The SmartWatch Pro combines modern design with powerful features. 
+        Track your health, manage notifications, and enjoy a stylish companion 
+        for your everyday life.
+      </p>
+      <button class="cta-btn">Buy Now</button>
+    </div>
+    <div class="product-image">
+      <img src="https://img.global.news.samsung.com/in/wp-content/uploads/2020/07/top.jpg" alt="SmartWatch Pro">
+    </div>
+  </section>
+</body>
+</html>
