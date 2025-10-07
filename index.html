@@ -1,66 +1,399 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My First Web Page</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <h1>Main Heading</h1>
-    <h2>Subheading</h2>
-    <h3>Smaller Subheading</h3>
-    <p>This is my first web page using HTML.</p>
-    <p>This is the first line.<br>This is the second line.</p>
-<hr>
-    <p><b>This is bold text.</b></p>
-    <p><i>This is italic text.</i></p>
-    <p><u>This is underlined text.</u></p>
-    <p><sup>This is superscript text.</sup></p>
-    <p><sub>This is subscript text.</sub></p>
-    <p><del>This is deleted text.</del></p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-    <ol>
-      <li>Login to the site</li>
-      <li>Navigate to dashboard</li>
-      <li>Start learning</li>
-    </ol>
-    <a href="https://www.google.com">Visit Google</a>
-    <br>
-    <a href="https://www.example.com" target="_blank">Open Example in new tab</a>
-    <br> 
-    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-    <br>
-    <table border="1">
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-      </tr>
-      <tr>
-        <td>Alice</td>
-        <td>22</td>
-      </tr>
-      <tr>
-        <td>Bob</td>
-        <td>25</td>
-      </tr>
-    </table>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name">
-      <br><br>
-      <input type="submit" value="Submit">
-    </form>
-    <header>
-      <h1>My Blog</h1>
-    </header>
-    <main>
-    <section>
-      <h2>Latest Posts</h2>
-      <p>Welcome to my blog...</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhanu Vardhan Medapalli | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== Header & Navbar ===== */
+    header {
+      background: linear-gradient(90deg, #3b53be, #1cc380);
+      color: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.05rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: white;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== Hero Section ===== */
+    #home {
+      background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      text-align: center;
+      padding: 100px 20px;
+      color: #222;
+      border-radius: 0 0 50px 50px;
+    }
+
+    #home h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #2575fc;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #6a11cb;
+    }
+
+    /* ===== About Section ===== */
+    #about {
+      max-width: 1000px;
+      margin: 80px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 60px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 2rem;
+      color: #2575fc;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 5px solid #2575fc;
+    }
+
+    /* ===== Projects Section ===== */
+    #projects {
+      background: #f0f4ff;
+      padding: 80px 20px;
+      border-radius: 50px 50px 0 0;
+    }
+
+    #projects h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #6a11cb;
+      margin-bottom: 40px;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .project {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project p {
+      padding: 15px;
+      color: #444;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* ===== Contact Section (Day 19 addition) ===== */
+    #contact {
+      padding: 80px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2rem;
+      color: #2575fc;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    label {
+      font-size: 1rem;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2575fc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6a11cb;
+    }
+
+    button:active {
+      background-color: #e5533d;
+    }
+
+    button:focus {
+      outline: 3px solid #ff6347;
+    }
+
+    /* ===== Social Icons ===== */
+    .social-icons {
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      font-size: 1.8rem;
+      color: #333;
+      margin: 0 10px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #2575fc;
+      transform: scale(1.1);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #84fab0;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #8fd3f4;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      #about {
+        padding: 40px 25px;
+      }
+
+      form {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Bhanu Vardhan Medapalli</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Creative Software Engineer crafting beautiful, responsive, and intelligent web experiences.</p>
+      <a href="#projects" class="btn">View My Work</a>
     </section>
-</main>
-  </body>
+
+    <!-- About Section -->
+    <section id="about">
+      <img src="BHANU_IMG.jpg" alt="Bhanu Vardhan" class="profile-photo">
+      <h2>About Me</h2>
+      <p>Hi! I’m <strong>Bhanu Vardhan Medapalli</strong> — a passionate Software Engineer with expertise in building full-stack web apps, data-driven systems, and intuitive user interfaces.</p>
+      <p>I specialize in <strong>HTML, CSS, JavaScript, Python, and ReactJS</strong>, and love solving real-world problems through clean, efficient code.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project-gallery">
+        <div class="project">
+          <img src="images/project1.jpg" alt="Project 1">
+          <p>🌐 Responsive Portfolio Website using HTML, CSS, and JavaScript</p>
+        </div>
+        <div class="project">
+          <img src="images/project2.jpg" alt="Project 2">
+          <p>💰 Billing Software built with Python and Tkinter</p>
+        </div>
+        <div class="project">
+          <img src="images/project3.jpg" alt="Project 3">
+          <p>🧠 Neuro-Fusion: AI-Driven Brain Tumor Diagnosis using CNN</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required aria-label="Enter your full name">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required aria-label="Enter your email">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required aria-label="Enter your message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/bhanu-vardhan-medapalli" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bhanu8199" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/Bhanu8199" target="_blank"><i class="fas fa-code"></i></a>
+        <a href="https://www.instagram.com/bhanuvardhan_medapalli/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:mbhanuvardhan630@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 <strong>BHANU VARDHAN MEDAPALLI</strong> | All rights reserved.</p>
+  </footer>
+</body>
 </html>
