@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+/* General Reset & Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #28a745;
+  transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #28a745;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #218838, #1e7e34);
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://source.unsplash.com/1600x900/?business,technology") center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+  animation: slideDown 1.2s ease;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease;
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 60px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.features h2 {
+  grid-column: 1/-1;
+  margin-bottom: 30px;
+  font-size: 32px;
+  animation: fadeIn 1s ease;
+}
+
+.feature-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Testimonials Section */
+.testimonials {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 60px;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  flex-wrap: wrap;
+}
+
+.testimonials h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  animation: fadeIn 1s ease;
+}
+
+.testimonial {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeInUp 1.2s ease;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.testimonial cite {
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+footer .social-links a {
+  color: #28a745;
+  text-decoration: none;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #fff;
+}
+
+/* =========================
+   RESPONSIVENESS
+   ========================= */
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .testimonials {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+  .testimonials {
+    flex-direction: row;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .features {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* =========================
+   KEYFRAME ANIMATIONS
+   ========================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">MyBrand</div>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cta-btn">Get Started</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Grow Your Business with Us</h1>
+    <p>We provide smart solutions to help you succeed effortlessly.</p>
+    <button class="cta-btn">Learn More</button>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="feature-item"> Fast & Reliable</div>
+    <div class="feature-item"> Smart Solutions</div>
+    <div class="feature-item"> 24/7 Support</div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>"This service changed the way I do business!"</p>
+      <cite>- John Doe</cite>
+    </div>
+    <div class="testimonial">
+      <p>"User-friendly and very effective. Highly recommended!"</p>
+      <cite>- Jane Smith</cite>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+      <p>&copy; 2025 BHANU VARDHAN MEDAPALLI. All rights reserved. | Contact: mbhanuvardhan630@gmail.com</p>
+    <div class="social-links">
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>

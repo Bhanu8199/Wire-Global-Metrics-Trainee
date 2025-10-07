@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3x3 Grid Layout</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;   /* 3 columns */
+      grid-template-rows: 100px auto 80px; /* 3 rows */
+      grid-template-areas: 
+        "header header header"
+        "content content sidebar"
+        "footer footer footer";
+      grid-gap: 10px; /* spacing between items */
+      height: 100vh;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+
+    .header {
+      grid-area: header;
+      background: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .content {
+      grid-area: content;
+      background: lightgreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: lightcoral;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="content">Content</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
